@@ -1,0 +1,40 @@
+package net.engineeringdigest.jurnalApp.controller;
+import java.util.*;
+
+import net.engineeringdigest.jurnalApp.entity.journalEntry;
+import org.springframework.web.bind.annotation.*;
+
+/*import java.util.HashMap;
+
+@RequestMapping("/_journal")
+@RestController
+public class JournalEntryController {
+    private Map<Long, journalEntry> journalEntries = new HashMap<>();
+    @GetMapping
+    public List<journalEntry> getAll(){
+        return new ArrayList<>(journalEntries.values());
+
+    }
+
+    public boolean createEntry(@RequestBody journalEntry myEntry){
+        journalEntries.put(myEntry.getId(), myEntry);
+        return true;
+    }
+    @GetMapping("id/{myid}")
+    public journalEntry getJournalId(@PathVariable long myid){
+        return journalEntries.get(myid);
+    }
+    @DeleteMapping("id/{myid}")
+    public journalEntry deleteEntryById(@PathVariable long myid){
+        return journalEntries.remove(myid);
+
+    }
+    @PutMapping("id/{id}")
+    public journalEntry updateJournalById(@PathVariable Long id,@PathVariable journalEntry myEntry){
+       return journalEntries.put(id, myEntry);
+
+
+    }
+
+
+}
