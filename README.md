@@ -71,7 +71,7 @@ git push heroku main
 ```
 
 ## License
-This project is licensed under the MIT License.
+anyone can contribute in this code
 
 ## Author
 [Uzair Fayaz](https://github.com/yourusername)
